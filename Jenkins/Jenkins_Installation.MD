@@ -18,12 +18,27 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 1. Confirm Java Version and set the java home
    ```sh
    java -version
-   find /usr/lib/jvm/java-1.8* | head -n 3
-   JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-1.el8_0.x86_64
+     #Goto root home directory
+   $ cd ~
+     #Find the java root directory
+   $ find /usr/lib/jvm/java-1.8* | head -n 3
+   
+   /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-1.el8_0.x86_64
+   
+   
+  # To set it permanently update your .bash_profile
+   $ vi .bash_profile  (Put the JAVA_HOME path above PATH variable)
+   
+   JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.47.amzn1.x86_64  (add this)
+   PATH=$PATH:$HOME/bin:$JAVA_HOME                                             (add path variable)
+# To see the complete path
+  $ exit
+  $ sudo su -
+  $ echo $JAVA_HOME
+  
+  
    export JAVA_HOME
-   PATH=$PATH:$JAVA_HOME
-    # To set it permanently update your .bash_profile
-   vi ~/.bash_profile
+   
    ```
    _The output should be something like this,_
     ```sh
@@ -37,7 +52,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
  You can install jenkins using the rpm or by setting up the repo. We will set up the repo so that we can update it easily in the future.
 1. Get the latest version of jenkins from https://pkg.jenkins.io/redhat-stable/ and install
    ```sh
-   yum -y install wget
+   yum -y install wget 
    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
    sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
    yum -y install jenkins
