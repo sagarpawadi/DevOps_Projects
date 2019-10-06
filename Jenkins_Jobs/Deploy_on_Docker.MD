@@ -20,13 +20,13 @@ Enable connection between Docker-host and Jenkins
 		- Hostname:`<ServerIP>`
 		- username: `dockeradmin`
                
-       -  `Advanced` > chose `Use password authentication, or use a different key`
+       -  `Advanced` > choose `Use password authentication, or use a different key`
 		 - password: `*******`
 		 
 - Test Connection
-   if connection fails,In the docker host server goto: vi /etc/ssh/sshd_config 
-    Change 
-            - PasswordAuthentication yes
+       if connection fails,In the docker host server goto: vi /etc/ssh/sshd_config 
+             Change ->
+            - PasswordAuthentication yes  ->
             -  $ service sshd reload
 
 
