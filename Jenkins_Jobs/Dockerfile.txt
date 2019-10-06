@@ -1,3 +1,6 @@
+#Docker File to Copy .war files from docker host to docker container
+#NOTE: Always file name will start with CAPITAL 'D' -> Dockerfile
+
 # Pull tomcat latest image from dockerhub 
 From tomcat:latest
 
