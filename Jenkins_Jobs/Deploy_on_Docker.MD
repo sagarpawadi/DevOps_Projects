@@ -25,8 +25,9 @@ Enable connection between Docker-host and Jenkins
 		 
 - Test Connection
    if connection fails,In the docker host server goto: vi /etc/ssh/sshd_config 
-    Change - PasswordAuthentication yes
-    $ service sshd reload
+    Change 
+            - PasswordAuthentication yes
+            -  $ service sshd reload
 
 
  
