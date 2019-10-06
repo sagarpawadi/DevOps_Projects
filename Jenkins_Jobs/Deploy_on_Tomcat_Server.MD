@@ -41,6 +41,10 @@
       - WAR/EAR files : `**/*.war`
       - Containers : `Tomcat 8.x`
          - Credentials: `deployer` (user created on above)
-         - Tomcat URL : `http://<PUBLIC_IP>:8080`
+         - Tomcat URL : http://<PUBLIC_IP>:8080/webapp/
+         ex: http://13.233.89.18:8080/webapp/
+         
+         Note: war file will be stored in below path
+         /opt/tomcat/webapps
 
 Save and run the job now.
